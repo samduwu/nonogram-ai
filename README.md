@@ -28,7 +28,7 @@ If any packages need to be updated, these must be saved to a new file via:
 
 Or if you want to install the latest updates from a new file:
 
-> pip install -U -r requirements.txt
+> pip install -r requirements.txt
 
 5. Start the Django development server via:
 
