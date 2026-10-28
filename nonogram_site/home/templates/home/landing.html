@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+
+    <!-- enctype forces the file to be sent as binary data, instead of converting to text -->
+    <form action="{% url 'home:process' %}" method="POST" enctype="multipart/form-data">
+      <!-- required by django to perform POST request -->
+      {% csrf_token %}
+      <label for="imageUpload">Select an image to upload:</label>
+      <!-- accept="image/*" restricts the file picker to only show image files -->
+      <input type="file" id="imageUpload" name="nonogram" accept="image/*" required>
+      
+      <button type="submit">Submit Image</button>
+    </form>
+
+  </body>
+</html>
